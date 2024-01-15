@@ -11,6 +11,8 @@ class ProjectController extends Controller
     public function index(Request $request)
     {
 
+        // RITORNO UN JSON :
+
         $results = Project::with('types', 'technologies')->paginate(12);
 
         return response()->json([
