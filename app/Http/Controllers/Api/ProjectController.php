@@ -13,7 +13,7 @@ class ProjectController extends Controller
 
         // RITORNO UN JSON :
 
-        $results = Project::with('types', 'technologies')->paginate(12);
+        $results = Project::With('type','technologies')->paginate(12);
 
         return response()->json([
             'success' => true,
